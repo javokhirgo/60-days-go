@@ -1,33 +1,38 @@
-# Day 7: CLI Calculator Project
+# Day 7 - CLI Calculator Project
 
-## What I Built
-A command-line calculator with 4 operations (Add, Subtract, Multiply, Divide).
+## what i built
+command-line calculator with add, subtract, multiply, divide operations
 
-## Key Concepts Applied
-- **Structs**: Calculator type with Result field
-- **Methods**: Attached operations to Calculator
-- **Pointer Receivers**: Modify calculator state
-- **Error Handling**: Return errors from Divide
-- **Loops**: Input validation with `for`
-- **Switch**: Route operations
+## what i used
+- structs (Calculator type)
+- methods with pointer receivers
+- error handling (for divide by zero)
+- loops (for menu)
+- switch statement (for operation routing)
+- fmt.Scan for user input
 
-## Best Practices Learned
-1. **Pointer receivers** when modifying state
-2. **Return errors** instead of printing inside methods
-3. **Reusable functions** for repeated logic (input handling)
-4. **Single loop** in menu instead of recursive calls
-5. **Clear exit path** for user
+## problems i had
+- first tried recursion for menu loop, but better to use single for loop
+- had issue with invalid input causing infinite loop
+- fixed with fmt.Scanln(&discard) to clear buffer
 
-## Files
-- `calculator/calculator.go` - My version
-- `calculator_best/calculator_best.go` - Best practices version
+## files
+- calculator/calculator.go - my version
+- calculator_best/calculator_best.go - better version (made by mentor)
+- calculator_pro/calculator.go - production style version
 
-## Run
-```bash
-go run day_7/calculator/calculator.go
-go run day_7/calculator_best/calculator_best.go
-```
+## what i learned from best practice version
+- separate calculation from display
+- return values from methods instead of printing inside
+- use bufio for better input handling
+- string operators not just numbers
+- cleaner error handling
 
+## improvements i need
+- better input validation
+- cleaner code structure
+- more separation of concerns
 
-Week 1 Complete! ✅
+week 1 done ✓
 
+## time spent: ~2 hours
